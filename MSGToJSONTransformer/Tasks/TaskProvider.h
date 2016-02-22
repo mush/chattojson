@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ChainableTask.h"
+#import "Chain.h"
 #import "JSONObject.h"
 
 /**

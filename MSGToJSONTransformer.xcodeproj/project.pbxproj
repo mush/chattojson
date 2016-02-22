@@ -16,7 +16,6 @@
 		227E7F411C7B30A500ABAF6C /* ChainableTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F271C7B30A500ABAF6C /* ChainableTask.m */; };
 		227E7F421C7B30A500ABAF6C /* ParallelTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F291C7B30A500ABAF6C /* ParallelTask.m */; };
 		227E7F431C7B30A500ABAF6C /* JSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F2C1C7B30A500ABAF6C /* JSONObject.m */; };
-		227E7F441C7B30A500ABAF6C /* JSONStringCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F2F1C7B30A500ABAF6C /* JSONStringCreator.m */; };
 		227E7F451C7B30A500ABAF6C /* FetchHTMLPageContentTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F321C7B30A500ABAF6C /* FetchHTMLPageContentTask.m */; };
 		227E7F461C7B30A500ABAF6C /* ParseHTMLPageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F341C7B30A500ABAF6C /* ParseHTMLPageTask.m */; };
 		227E7F471C7B30A500ABAF6C /* RegExMatcherTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F361C7B30A500ABAF6C /* RegExMatcherTask.m */; };
@@ -44,6 +43,8 @@
 		227E7F7D1C7B332900ABAF6C /* ParseHTMLPageTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F691C7B332900ABAF6C /* ParseHTMLPageTaskTests.m */; };
 		227E7F7E1C7B332900ABAF6C /* RegExMatcherTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F6A1C7B332900ABAF6C /* RegExMatcherTaskTest.m */; };
 		227E7F7F1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F6B1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m */; };
+		227E7F811C7B35B400ABAF6C /* TaskProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 227E7F3E1C7B30A500ABAF6C /* TaskProvider.h */; };
+		227E7F821C7B360400ABAF6C /* Chain.h in Headers */ = {isa = PBXBuildFile; fileRef = 227E7F251C7B30A500ABAF6C /* Chain.h */; };
 		BAD636A5D0D724DFE60F65B4 /* libPods-MSGToJSONTransformerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -77,8 +78,6 @@
 		227E7F291C7B30A500ABAF6C /* ParallelTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallelTask.m; sourceTree = "<group>"; };
 		227E7F2B1C7B30A500ABAF6C /* JSONObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONObject.h; sourceTree = "<group>"; };
 		227E7F2C1C7B30A500ABAF6C /* JSONObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONObject.m; sourceTree = "<group>"; };
-		227E7F2E1C7B30A500ABAF6C /* JSONStringCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStringCreator.h; sourceTree = "<group>"; };
-		227E7F2F1C7B30A500ABAF6C /* JSONStringCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONStringCreator.m; sourceTree = "<group>"; };
 		227E7F311C7B30A500ABAF6C /* FetchHTMLPageContentTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchHTMLPageContentTask.h; sourceTree = "<group>"; };
 		227E7F321C7B30A500ABAF6C /* FetchHTMLPageContentTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchHTMLPageContentTask.m; sourceTree = "<group>"; };
 		227E7F331C7B30A500ABAF6C /* ParseHTMLPageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseHTMLPageTask.h; sourceTree = "<group>"; };
@@ -208,7 +207,6 @@
 			children = (
 				227E7F241C7B30A500ABAF6C /* Chain */,
 				227E7F2A1C7B30A500ABAF6C /* JSONObject */,
-				227E7F2D1C7B30A500ABAF6C /* JSONStringCreator */,
 			);
 			path = libs;
 			sourceTree = "<group>";
@@ -232,15 +230,6 @@
 				227E7F2C1C7B30A500ABAF6C /* JSONObject.m */,
 			);
 			path = JSONObject;
-			sourceTree = "<group>";
-		};
-		227E7F2D1C7B30A500ABAF6C /* JSONStringCreator */ = {
-			isa = PBXGroup;
-			children = (
-				227E7F2E1C7B30A500ABAF6C /* JSONStringCreator.h */,
-				227E7F2F1C7B30A500ABAF6C /* JSONStringCreator.m */,
-			);
-			path = JSONStringCreator;
 			sourceTree = "<group>";
 		};
 		227E7F301C7B30A500ABAF6C /* Tasks */ = {
@@ -311,7 +300,6 @@
 			isa = PBXGroup;
 			children = (
 				227E7F601C7B332900ABAF6C /* Chain */,
-				227E7F631C7B332900ABAF6C /* JSONCreator */,
 				227E7F641C7B332900ABAF6C /* JSONObject */,
 				227E7F661C7B332900ABAF6C /* MSGToJSONTransformerTests.m */,
 				227E7F671C7B332900ABAF6C /* Tasks */,
@@ -326,13 +314,6 @@
 				227E7F621C7B332900ABAF6C /* ParallelTaskTests.m */,
 			);
 			path = Chain;
-			sourceTree = "<group>";
-		};
-		227E7F631C7B332900ABAF6C /* JSONCreator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JSONCreator;
 			sourceTree = "<group>";
 		};
 		227E7F641C7B332900ABAF6C /* JSONObject */ = {
@@ -373,6 +354,18 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		227E7F801C7B359A00ABAF6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227E7F821C7B360400ABAF6C /* Chain.h in Headers */,
+				227E7F811C7B35B400ABAF6C /* TaskProvider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		227E7EFA1C7B307E00ABAF6C /* MSGToJSONTransformer */ = {
 			isa = PBXNativeTarget;
@@ -401,6 +394,7 @@
 				227E7F121C7B307E00ABAF6C /* Resources */,
 				ABB69C8D9AF927A5B3E55B1F /* Embed Pods Frameworks */,
 				030D07F7B92A4D9467E1B2EE /* Copy Pods Resources */,
+				227E7F801C7B359A00ABAF6C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -536,7 +530,6 @@
 				227E7F411C7B30A500ABAF6C /* ChainableTask.m in Sources */,
 				227E7F481C7B30A500ABAF6C /* ChatMsgObject.m in Sources */,
 				227E7F061C7B307E00ABAF6C /* ViewController.m in Sources */,
-				227E7F441C7B30A500ABAF6C /* JSONStringCreator.m in Sources */,
 				227E7F421C7B30A500ABAF6C /* ParallelTask.m in Sources */,
 				227E7F031C7B307E00ABAF6C /* AppDelegate.m in Sources */,
 				227E7F471C7B30A500ABAF6C /* RegExMatcherTask.m in Sources */,
