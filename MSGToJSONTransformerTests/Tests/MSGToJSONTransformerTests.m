@@ -2,11 +2,12 @@
 //  MSGToJSONTransformerTests.m
 //  MSGToJSONTransformerTests
 //
-//  Created by Ashiqur Rahman on 2/22/16.
+//  Created by Ashiqur Rahman on 2/9/16.
 //  Copyright © 2016 Ashiqur Rahman. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
+#import "ChatMsgObject.h"
 
 @interface MSGToJSONTransformerTests : XCTestCase
 
@@ -25,15 +26,10 @@
 }
 
 - (void)testExample {
+
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
 
 @end

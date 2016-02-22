@@ -13,7 +13,38 @@
 		227E7F091C7B307E00ABAF6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F071C7B307E00ABAF6C /* Main.storyboard */; };
 		227E7F0B1C7B307E00ABAF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F0A1C7B307E00ABAF6C /* Assets.xcassets */; };
 		227E7F0E1C7B307E00ABAF6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F0C1C7B307E00ABAF6C /* LaunchScreen.storyboard */; };
-		227E7F191C7B307E00ABAF6C /* MSGToJSONTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F181C7B307E00ABAF6C /* MSGToJSONTransformerTests.m */; };
+		227E7F411C7B30A500ABAF6C /* ChainableTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F271C7B30A500ABAF6C /* ChainableTask.m */; };
+		227E7F421C7B30A500ABAF6C /* ParallelTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F291C7B30A500ABAF6C /* ParallelTask.m */; };
+		227E7F431C7B30A500ABAF6C /* JSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F2C1C7B30A500ABAF6C /* JSONObject.m */; };
+		227E7F441C7B30A500ABAF6C /* JSONStringCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F2F1C7B30A500ABAF6C /* JSONStringCreator.m */; };
+		227E7F451C7B30A500ABAF6C /* FetchHTMLPageContentTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F321C7B30A500ABAF6C /* FetchHTMLPageContentTask.m */; };
+		227E7F461C7B30A500ABAF6C /* ParseHTMLPageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F341C7B30A500ABAF6C /* ParseHTMLPageTask.m */; };
+		227E7F471C7B30A500ABAF6C /* RegExMatcherTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F361C7B30A500ABAF6C /* RegExMatcherTask.m */; };
+		227E7F481C7B30A500ABAF6C /* ChatMsgObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F391C7B30A500ABAF6C /* ChatMsgObject.m */; };
+		227E7F491C7B30A500ABAF6C /* LinkObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F3B1C7B30A500ABAF6C /* LinkObject.m */; };
+		227E7F4A1C7B30A500ABAF6C /* ParsedHTMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F3D1C7B30A500ABAF6C /* ParsedHTMLObject.m */; };
+		227E7F4B1C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F401C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.m */; };
+		227E7F6C1C7B332900ABAF6C /* OHHTTPStubsResponse+HttpMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F4E1C7B332800ABAF6C /* OHHTTPStubsResponse+HttpMessage.m */; };
+		227E7F6D1C7B332900ABAF6C /* HelperUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F511C7B332800ABAF6C /* HelperUnitTest.m */; };
+		227E7F6E1C7B332900ABAF6C /* http-www.emptytitle.com.stub in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F531C7B332800ABAF6C /* http-www.emptytitle.com.stub */; };
+		227E7F6F1C7B332900ABAF6C /* http-www.invalidtitletag.com.stub in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F541C7B332800ABAF6C /* http-www.invalidtitletag.com.stub */; };
+		227E7F701C7B332900ABAF6C /* http-www.nbcolympics.com.stub in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F551C7B332800ABAF6C /* http-www.nbcolympics.com.stub */; };
+		227E7F711C7B332900ABAF6C /* http-www.notitletag.com.stub in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F561C7B332800ABAF6C /* http-www.notitletag.com.stub */; };
+		227E7F721C7B332900ABAF6C /* http-www.titletagwithattribute.com.stub in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F571C7B332800ABAF6C /* http-www.titletagwithattribute.com.stub */; };
+		227E7F731C7B332900ABAF6C /* http-www.titlewithnewline.com.stub in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F581C7B332800ABAF6C /* http-www.titlewithnewline.com.stub */; };
+		227E7F741C7B332900ABAF6C /* http-www.titlewithspecialcharacter.com.stub in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F591C7B332800ABAF6C /* http-www.titlewithspecialcharacter.com.stub */; };
+		227E7F751C7B332900ABAF6C /* https-twitter.com_jdorfman_status_430511497475670016.stub in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F5A1C7B332900ABAF6C /* https-twitter.com_jdorfman_status_430511497475670016.stub */; };
+		227E7F761C7B332900ABAF6C /* https-www.google.com.au.stub in Resources */ = {isa = PBXBuildFile; fileRef = 227E7F5B1C7B332900ABAF6C /* https-www.google.com.au.stub */; };
+		227E7F771C7B332900ABAF6C /* HTMLPageStubManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F5D1C7B332900ABAF6C /* HTMLPageStubManager.m */; };
+		227E7F781C7B332900ABAF6C /* ChainableTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F611C7B332900ABAF6C /* ChainableTaskTests.m */; };
+		227E7F791C7B332900ABAF6C /* ParallelTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F621C7B332900ABAF6C /* ParallelTaskTests.m */; };
+		227E7F7A1C7B332900ABAF6C /* JSONObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F651C7B332900ABAF6C /* JSONObjectTest.m */; };
+		227E7F7B1C7B332900ABAF6C /* MSGToJSONTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F661C7B332900ABAF6C /* MSGToJSONTransformerTests.m */; };
+		227E7F7C1C7B332900ABAF6C /* FetchHTMLPageContentTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F681C7B332900ABAF6C /* FetchHTMLPageContentTaskTests.m */; };
+		227E7F7D1C7B332900ABAF6C /* ParseHTMLPageTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F691C7B332900ABAF6C /* ParseHTMLPageTaskTests.m */; };
+		227E7F7E1C7B332900ABAF6C /* RegExMatcherTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F6A1C7B332900ABAF6C /* RegExMatcherTaskTest.m */; };
+		227E7F7F1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F6B1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m */; };
+		BAD636A5D0D724DFE60F65B4 /* libPods-MSGToJSONTransformerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +69,58 @@
 		227E7F0D1C7B307E00ABAF6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		227E7F0F1C7B307E00ABAF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		227E7F141C7B307E00ABAF6C /* MSGToJSONTransformerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSGToJSONTransformerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		227E7F181C7B307E00ABAF6C /* MSGToJSONTransformerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSGToJSONTransformerTests.m; sourceTree = "<group>"; };
 		227E7F1A1C7B307E00ABAF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227E7F251C7B30A500ABAF6C /* Chain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chain.h; sourceTree = "<group>"; };
+		227E7F261C7B30A500ABAF6C /* ChainableTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainableTask.h; sourceTree = "<group>"; };
+		227E7F271C7B30A500ABAF6C /* ChainableTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainableTask.m; sourceTree = "<group>"; };
+		227E7F281C7B30A500ABAF6C /* ParallelTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallelTask.h; sourceTree = "<group>"; };
+		227E7F291C7B30A500ABAF6C /* ParallelTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallelTask.m; sourceTree = "<group>"; };
+		227E7F2B1C7B30A500ABAF6C /* JSONObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONObject.h; sourceTree = "<group>"; };
+		227E7F2C1C7B30A500ABAF6C /* JSONObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONObject.m; sourceTree = "<group>"; };
+		227E7F2E1C7B30A500ABAF6C /* JSONStringCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStringCreator.h; sourceTree = "<group>"; };
+		227E7F2F1C7B30A500ABAF6C /* JSONStringCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONStringCreator.m; sourceTree = "<group>"; };
+		227E7F311C7B30A500ABAF6C /* FetchHTMLPageContentTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchHTMLPageContentTask.h; sourceTree = "<group>"; };
+		227E7F321C7B30A500ABAF6C /* FetchHTMLPageContentTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchHTMLPageContentTask.m; sourceTree = "<group>"; };
+		227E7F331C7B30A500ABAF6C /* ParseHTMLPageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseHTMLPageTask.h; sourceTree = "<group>"; };
+		227E7F341C7B30A500ABAF6C /* ParseHTMLPageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseHTMLPageTask.m; sourceTree = "<group>"; };
+		227E7F351C7B30A500ABAF6C /* RegExMatcherTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegExMatcherTask.h; sourceTree = "<group>"; };
+		227E7F361C7B30A500ABAF6C /* RegExMatcherTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegExMatcherTask.m; sourceTree = "<group>"; };
+		227E7F381C7B30A500ABAF6C /* ChatMsgObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMsgObject.h; sourceTree = "<group>"; };
+		227E7F391C7B30A500ABAF6C /* ChatMsgObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMsgObject.m; sourceTree = "<group>"; };
+		227E7F3A1C7B30A500ABAF6C /* LinkObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkObject.h; sourceTree = "<group>"; };
+		227E7F3B1C7B30A500ABAF6C /* LinkObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkObject.m; sourceTree = "<group>"; };
+		227E7F3C1C7B30A500ABAF6C /* ParsedHTMLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsedHTMLObject.h; sourceTree = "<group>"; };
+		227E7F3D1C7B30A500ABAF6C /* ParsedHTMLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsedHTMLObject.m; sourceTree = "<group>"; };
+		227E7F3E1C7B30A500ABAF6C /* TaskProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskProvider.h; sourceTree = "<group>"; };
+		227E7F3F1C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextToJSONObjectTransformerTask.h; sourceTree = "<group>"; };
+		227E7F401C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextToJSONObjectTransformerTask.m; sourceTree = "<group>"; };
+		227E7F4D1C7B332800ABAF6C /* OHHTTPStubsResponse+HttpMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubsResponse+HttpMessage.h"; sourceTree = "<group>"; };
+		227E7F4E1C7B332800ABAF6C /* OHHTTPStubsResponse+HttpMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubsResponse+HttpMessage.m"; sourceTree = "<group>"; };
+		227E7F501C7B332800ABAF6C /* HelperUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperUnitTest.h; sourceTree = "<group>"; };
+		227E7F511C7B332800ABAF6C /* HelperUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperUnitTest.m; sourceTree = "<group>"; };
+		227E7F531C7B332800ABAF6C /* http-www.emptytitle.com.stub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "http-www.emptytitle.com.stub"; sourceTree = "<group>"; };
+		227E7F541C7B332800ABAF6C /* http-www.invalidtitletag.com.stub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "http-www.invalidtitletag.com.stub"; sourceTree = "<group>"; };
+		227E7F551C7B332800ABAF6C /* http-www.nbcolympics.com.stub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "http-www.nbcolympics.com.stub"; sourceTree = "<group>"; };
+		227E7F561C7B332800ABAF6C /* http-www.notitletag.com.stub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "http-www.notitletag.com.stub"; sourceTree = "<group>"; };
+		227E7F571C7B332800ABAF6C /* http-www.titletagwithattribute.com.stub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "http-www.titletagwithattribute.com.stub"; sourceTree = "<group>"; };
+		227E7F581C7B332800ABAF6C /* http-www.titlewithnewline.com.stub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "http-www.titlewithnewline.com.stub"; sourceTree = "<group>"; };
+		227E7F591C7B332800ABAF6C /* http-www.titlewithspecialcharacter.com.stub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "http-www.titlewithspecialcharacter.com.stub"; sourceTree = "<group>"; };
+		227E7F5A1C7B332900ABAF6C /* https-twitter.com_jdorfman_status_430511497475670016.stub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "https-twitter.com_jdorfman_status_430511497475670016.stub"; sourceTree = "<group>"; };
+		227E7F5B1C7B332900ABAF6C /* https-www.google.com.au.stub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "https-www.google.com.au.stub"; sourceTree = "<group>"; };
+		227E7F5C1C7B332900ABAF6C /* HTMLPageStubManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLPageStubManager.h; sourceTree = "<group>"; };
+		227E7F5D1C7B332900ABAF6C /* HTMLPageStubManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLPageStubManager.m; sourceTree = "<group>"; };
+		227E7F5E1C7B332900ABAF6C /* TestDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDefines.h; sourceTree = "<group>"; };
+		227E7F611C7B332900ABAF6C /* ChainableTaskTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainableTaskTests.m; sourceTree = "<group>"; };
+		227E7F621C7B332900ABAF6C /* ParallelTaskTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallelTaskTests.m; sourceTree = "<group>"; };
+		227E7F651C7B332900ABAF6C /* JSONObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONObjectTest.m; sourceTree = "<group>"; };
+		227E7F661C7B332900ABAF6C /* MSGToJSONTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGToJSONTransformerTests.m; sourceTree = "<group>"; };
+		227E7F681C7B332900ABAF6C /* FetchHTMLPageContentTaskTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchHTMLPageContentTaskTests.m; sourceTree = "<group>"; };
+		227E7F691C7B332900ABAF6C /* ParseHTMLPageTaskTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseHTMLPageTaskTests.m; sourceTree = "<group>"; };
+		227E7F6A1C7B332900ABAF6C /* RegExMatcherTaskTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegExMatcherTaskTest.m; sourceTree = "<group>"; };
+		227E7F6B1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextToJSONObjectTransformerTaskTest.m; sourceTree = "<group>"; };
+		36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSGToJSONTransformerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AFC62AA9EA8EC1D84EA48F1 /* Pods-MSGToJSONTransformerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGToJSONTransformerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3BD090F9944FFE5B2CEBAAA /* Pods-MSGToJSONTransformerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGToJSONTransformerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD636A5D0D724DFE60F65B4 /* libPods-MSGToJSONTransformerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +148,8 @@
 				227E7EFD1C7B307E00ABAF6C /* MSGToJSONTransformer */,
 				227E7F171C7B307E00ABAF6C /* MSGToJSONTransformerTests */,
 				227E7EFC1C7B307E00ABAF6C /* Products */,
+				4DAF308D59F9AE65C5666B35 /* Pods */,
+				3B48B5689312FAD3EA9B39E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +165,8 @@
 		227E7EFD1C7B307E00ABAF6C /* MSGToJSONTransformer */ = {
 			isa = PBXGroup;
 			children = (
+				227E7F231C7B30A500ABAF6C /* libs */,
+				227E7F301C7B30A500ABAF6C /* Tasks */,
 				227E7F011C7B307E00ABAF6C /* AppDelegate.h */,
 				227E7F021C7B307E00ABAF6C /* AppDelegate.m */,
 				227E7F041C7B307E00ABAF6C /* ViewController.h */,
@@ -105,10 +191,184 @@
 		227E7F171C7B307E00ABAF6C /* MSGToJSONTransformerTests */ = {
 			isa = PBXGroup;
 			children = (
-				227E7F181C7B307E00ABAF6C /* MSGToJSONTransformerTests.m */,
+				227E7F4C1C7B332800ABAF6C /* Extension */,
+				227E7F4F1C7B332800ABAF6C /* Helper */,
+				227E7F521C7B332800ABAF6C /* html_page_stubs */,
+				227E7F5C1C7B332900ABAF6C /* HTMLPageStubManager.h */,
+				227E7F5D1C7B332900ABAF6C /* HTMLPageStubManager.m */,
+				227E7F5E1C7B332900ABAF6C /* TestDefines.h */,
+				227E7F5F1C7B332900ABAF6C /* Tests */,
 				227E7F1A1C7B307E00ABAF6C /* Info.plist */,
 			);
 			path = MSGToJSONTransformerTests;
+			sourceTree = "<group>";
+		};
+		227E7F231C7B30A500ABAF6C /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F241C7B30A500ABAF6C /* Chain */,
+				227E7F2A1C7B30A500ABAF6C /* JSONObject */,
+				227E7F2D1C7B30A500ABAF6C /* JSONStringCreator */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		227E7F241C7B30A500ABAF6C /* Chain */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F251C7B30A500ABAF6C /* Chain.h */,
+				227E7F261C7B30A500ABAF6C /* ChainableTask.h */,
+				227E7F271C7B30A500ABAF6C /* ChainableTask.m */,
+				227E7F281C7B30A500ABAF6C /* ParallelTask.h */,
+				227E7F291C7B30A500ABAF6C /* ParallelTask.m */,
+			);
+			path = Chain;
+			sourceTree = "<group>";
+		};
+		227E7F2A1C7B30A500ABAF6C /* JSONObject */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F2B1C7B30A500ABAF6C /* JSONObject.h */,
+				227E7F2C1C7B30A500ABAF6C /* JSONObject.m */,
+			);
+			path = JSONObject;
+			sourceTree = "<group>";
+		};
+		227E7F2D1C7B30A500ABAF6C /* JSONStringCreator */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F2E1C7B30A500ABAF6C /* JSONStringCreator.h */,
+				227E7F2F1C7B30A500ABAF6C /* JSONStringCreator.m */,
+			);
+			path = JSONStringCreator;
+			sourceTree = "<group>";
+		};
+		227E7F301C7B30A500ABAF6C /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F311C7B30A500ABAF6C /* FetchHTMLPageContentTask.h */,
+				227E7F321C7B30A500ABAF6C /* FetchHTMLPageContentTask.m */,
+				227E7F331C7B30A500ABAF6C /* ParseHTMLPageTask.h */,
+				227E7F341C7B30A500ABAF6C /* ParseHTMLPageTask.m */,
+				227E7F351C7B30A500ABAF6C /* RegExMatcherTask.h */,
+				227E7F361C7B30A500ABAF6C /* RegExMatcherTask.m */,
+				227E7F371C7B30A500ABAF6C /* TaskObjects */,
+				227E7F3E1C7B30A500ABAF6C /* TaskProvider.h */,
+				227E7F3F1C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.h */,
+				227E7F401C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.m */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		227E7F371C7B30A500ABAF6C /* TaskObjects */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F381C7B30A500ABAF6C /* ChatMsgObject.h */,
+				227E7F391C7B30A500ABAF6C /* ChatMsgObject.m */,
+				227E7F3A1C7B30A500ABAF6C /* LinkObject.h */,
+				227E7F3B1C7B30A500ABAF6C /* LinkObject.m */,
+				227E7F3C1C7B30A500ABAF6C /* ParsedHTMLObject.h */,
+				227E7F3D1C7B30A500ABAF6C /* ParsedHTMLObject.m */,
+			);
+			path = TaskObjects;
+			sourceTree = "<group>";
+		};
+		227E7F4C1C7B332800ABAF6C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F4D1C7B332800ABAF6C /* OHHTTPStubsResponse+HttpMessage.h */,
+				227E7F4E1C7B332800ABAF6C /* OHHTTPStubsResponse+HttpMessage.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		227E7F4F1C7B332800ABAF6C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F501C7B332800ABAF6C /* HelperUnitTest.h */,
+				227E7F511C7B332800ABAF6C /* HelperUnitTest.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		227E7F521C7B332800ABAF6C /* html_page_stubs */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F531C7B332800ABAF6C /* http-www.emptytitle.com.stub */,
+				227E7F541C7B332800ABAF6C /* http-www.invalidtitletag.com.stub */,
+				227E7F551C7B332800ABAF6C /* http-www.nbcolympics.com.stub */,
+				227E7F561C7B332800ABAF6C /* http-www.notitletag.com.stub */,
+				227E7F571C7B332800ABAF6C /* http-www.titletagwithattribute.com.stub */,
+				227E7F581C7B332800ABAF6C /* http-www.titlewithnewline.com.stub */,
+				227E7F591C7B332800ABAF6C /* http-www.titlewithspecialcharacter.com.stub */,
+				227E7F5A1C7B332900ABAF6C /* https-twitter.com_jdorfman_status_430511497475670016.stub */,
+				227E7F5B1C7B332900ABAF6C /* https-www.google.com.au.stub */,
+			);
+			path = html_page_stubs;
+			sourceTree = "<group>";
+		};
+		227E7F5F1C7B332900ABAF6C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F601C7B332900ABAF6C /* Chain */,
+				227E7F631C7B332900ABAF6C /* JSONCreator */,
+				227E7F641C7B332900ABAF6C /* JSONObject */,
+				227E7F661C7B332900ABAF6C /* MSGToJSONTransformerTests.m */,
+				227E7F671C7B332900ABAF6C /* Tasks */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		227E7F601C7B332900ABAF6C /* Chain */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F611C7B332900ABAF6C /* ChainableTaskTests.m */,
+				227E7F621C7B332900ABAF6C /* ParallelTaskTests.m */,
+			);
+			path = Chain;
+			sourceTree = "<group>";
+		};
+		227E7F631C7B332900ABAF6C /* JSONCreator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSONCreator;
+			sourceTree = "<group>";
+		};
+		227E7F641C7B332900ABAF6C /* JSONObject */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F651C7B332900ABAF6C /* JSONObjectTest.m */,
+			);
+			path = JSONObject;
+			sourceTree = "<group>";
+		};
+		227E7F671C7B332900ABAF6C /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F681C7B332900ABAF6C /* FetchHTMLPageContentTaskTests.m */,
+				227E7F691C7B332900ABAF6C /* ParseHTMLPageTaskTests.m */,
+				227E7F6A1C7B332900ABAF6C /* RegExMatcherTaskTest.m */,
+				227E7F6B1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		3B48B5689312FAD3EA9B39E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DAF308D59F9AE65C5666B35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC62AA9EA8EC1D84EA48F1 /* Pods-MSGToJSONTransformerTests.debug.xcconfig */,
+				F3BD090F9944FFE5B2CEBAAA /* Pods-MSGToJSONTransformerTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +395,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 227E7F201C7B307E00ABAF6C /* Build configuration list for PBXNativeTarget "MSGToJSONTransformerTests" */;
 			buildPhases = (
+				BEE6FBC809291EEADD3CCB84 /* Check Pods Manifest.lock */,
 				227E7F101C7B307E00ABAF6C /* Sources */,
 				227E7F111C7B307E00ABAF6C /* Frameworks */,
 				227E7F121C7B307E00ABAF6C /* Resources */,
+				ABB69C8D9AF927A5B3E55B1F /* Embed Pods Frameworks */,
+				030D07F7B92A4D9467E1B2EE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,19 +466,87 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227E7F711C7B332900ABAF6C /* http-www.notitletag.com.stub in Resources */,
+				227E7F741C7B332900ABAF6C /* http-www.titlewithspecialcharacter.com.stub in Resources */,
+				227E7F6E1C7B332900ABAF6C /* http-www.emptytitle.com.stub in Resources */,
+				227E7F6F1C7B332900ABAF6C /* http-www.invalidtitletag.com.stub in Resources */,
+				227E7F701C7B332900ABAF6C /* http-www.nbcolympics.com.stub in Resources */,
+				227E7F761C7B332900ABAF6C /* https-www.google.com.au.stub in Resources */,
+				227E7F751C7B332900ABAF6C /* https-twitter.com_jdorfman_status_430511497475670016.stub in Resources */,
+				227E7F721C7B332900ABAF6C /* http-www.titletagwithattribute.com.stub in Resources */,
+				227E7F731C7B332900ABAF6C /* http-www.titlewithnewline.com.stub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		030D07F7B92A4D9467E1B2EE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABB69C8D9AF927A5B3E55B1F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEE6FBC809291EEADD3CCB84 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		227E7EF71C7B307E00ABAF6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227E7F411C7B30A500ABAF6C /* ChainableTask.m in Sources */,
+				227E7F481C7B30A500ABAF6C /* ChatMsgObject.m in Sources */,
 				227E7F061C7B307E00ABAF6C /* ViewController.m in Sources */,
+				227E7F441C7B30A500ABAF6C /* JSONStringCreator.m in Sources */,
+				227E7F421C7B30A500ABAF6C /* ParallelTask.m in Sources */,
 				227E7F031C7B307E00ABAF6C /* AppDelegate.m in Sources */,
+				227E7F471C7B30A500ABAF6C /* RegExMatcherTask.m in Sources */,
+				227E7F4B1C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.m in Sources */,
+				227E7F431C7B30A500ABAF6C /* JSONObject.m in Sources */,
+				227E7F4A1C7B30A500ABAF6C /* ParsedHTMLObject.m in Sources */,
+				227E7F491C7B30A500ABAF6C /* LinkObject.m in Sources */,
 				227E7F001C7B307E00ABAF6C /* main.m in Sources */,
+				227E7F451C7B30A500ABAF6C /* FetchHTMLPageContentTask.m in Sources */,
+				227E7F461C7B30A500ABAF6C /* ParseHTMLPageTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +554,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227E7F191C7B307E00ABAF6C /* MSGToJSONTransformerTests.m in Sources */,
+				227E7F7A1C7B332900ABAF6C /* JSONObjectTest.m in Sources */,
+				227E7F781C7B332900ABAF6C /* ChainableTaskTests.m in Sources */,
+				227E7F7F1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m in Sources */,
+				227E7F7D1C7B332900ABAF6C /* ParseHTMLPageTaskTests.m in Sources */,
+				227E7F7B1C7B332900ABAF6C /* MSGToJSONTransformerTests.m in Sources */,
+				227E7F6C1C7B332900ABAF6C /* OHHTTPStubsResponse+HttpMessage.m in Sources */,
+				227E7F771C7B332900ABAF6C /* HTMLPageStubManager.m in Sources */,
+				227E7F791C7B332900ABAF6C /* ParallelTaskTests.m in Sources */,
+				227E7F7E1C7B332900ABAF6C /* RegExMatcherTaskTest.m in Sources */,
+				227E7F6D1C7B332900ABAF6C /* HelperUnitTest.m in Sources */,
+				227E7F7C1C7B332900ABAF6C /* FetchHTMLPageContentTaskTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +704,7 @@
 		};
 		227E7F211C7B307E00ABAF6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AFC62AA9EA8EC1D84EA48F1 /* Pods-MSGToJSONTransformerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MSGToJSONTransformerTests/Info.plist;
@@ -375,6 +717,7 @@
 		};
 		227E7F221C7B307E00ABAF6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3BD090F9944FFE5B2CEBAAA /* Pods-MSGToJSONTransformerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MSGToJSONTransformerTests/Info.plist;
@@ -404,6 +747,7 @@
 				227E7F1F1C7B307E00ABAF6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		227E7F201C7B307E00ABAF6C /* Build configuration list for PBXNativeTarget "MSGToJSONTransformerTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +756,7 @@
 				227E7F221C7B307E00ABAF6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

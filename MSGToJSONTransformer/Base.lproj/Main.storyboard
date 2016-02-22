@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNl-ep-uNU">
+                                <rect key="frame" x="231" y="20" width="139" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="QqH-pQ-PnB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPs-n9-NvN">
+                                <rect key="frame" x="20" y="540" width="560" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTC-D4-hA2">
+                                        <rect key="frame" x="8" y="5" width="427" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFP-j3-PXF">
+                                        <rect key="frame" x="477" y="5" width="75" height="30"/>
+                                        <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="Kwi-DH-ara"/>
+                                        </constraints>
+                                        <state key="normal" title="Generate">
+                                            <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnClickGenerate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lq9-BK-7EC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstItem="PTC-D4-hA2" firstAttribute="top" secondItem="xPs-n9-NvN" secondAttribute="top" constant="5" id="AgT-sx-LeD"/>
+                                    <constraint firstItem="QFP-j3-PXF" firstAttribute="top" secondItem="xPs-n9-NvN" secondAttribute="top" constant="5" id="Kjr-og-fti"/>
+                                    <constraint firstItem="PTC-D4-hA2" firstAttribute="leading" secondItem="xPs-n9-NvN" secondAttribute="leading" constant="8" id="T4X-s1-gX9"/>
+                                    <constraint firstItem="QFP-j3-PXF" firstAttribute="leading" secondItem="PTC-D4-hA2" secondAttribute="trailing" constant="42" id="Xzv-yL-Xbv"/>
+                                    <constraint firstAttribute="height" constant="40" id="vEU-sJ-qc9"/>
+                                    <constraint firstAttribute="trailing" secondItem="QFP-j3-PXF" secondAttribute="trailing" constant="8" id="wQ8-NR-Xer"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohy-hP-KmT">
+                                <rect key="frame" x="20" y="83" width="560" height="434"/>
+                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xPs-n9-NvN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="E97-CZ-kyL"/>
+                            <constraint firstItem="qNl-ep-uNU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ghv-Tz-Ath"/>
+                            <constraint firstItem="ohy-hP-KmT" firstAttribute="top" secondItem="qNl-ep-uNU" secondAttribute="bottom" constant="31" id="Oc3-vS-RcO"/>
+                            <constraint firstItem="ohy-hP-KmT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PiG-tc-UG4"/>
+                            <constraint firstItem="qNl-ep-uNU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wop-kC-wBl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ohy-hP-KmT" secondAttribute="trailing" id="dEh-Yp-Qtn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xPs-n9-NvN" secondAttribute="bottom" constant="20" id="ir4-4P-1Eq"/>
+                            <constraint firstItem="qNl-ep-uNU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jM8-93-rRp"/>
+                            <constraint firstItem="xPs-n9-NvN" firstAttribute="top" secondItem="ohy-hP-KmT" secondAttribute="bottom" constant="23" id="nG2-ut-noq"/>
+                            <constraint firstItem="xPs-n9-NvN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xDX-Kh-2fz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFieldMsg" destination="PTC-D4-hA2" id="RfB-jR-vvI"/>
+                        <outlet property="textViewJSON" destination="ohy-hP-KmT" id="5aN-PU-wh3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="307" y="336"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Tue, 26 Jan 2016 14:33:59 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Last-Modified: Tue, 26 Jan 2016 14:30:02 GMT
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>!@#$%^&*()_+=-.,<>?/:;"'{}[]|\`~</title>
+</head>
+<body>mush</body>
+</html>

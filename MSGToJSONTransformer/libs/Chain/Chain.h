@@ -1,15 +1,16 @@
 //
-//  ViewController.h
+//  Chain.h
 //  MSGToJSONTransformer
 //
 //  Created by Ashiqur Rahman on 2/9/16.
 //  Copyright © 2016 Ashiqur Rahman. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef Chain_h
+#define Chain_h
 
-@interface ViewController : UIViewController
+#import "ChainableTask.h"
+#import "ParallelTask.h"
 
 
-@end
-
+#endif /* Chain_h */
