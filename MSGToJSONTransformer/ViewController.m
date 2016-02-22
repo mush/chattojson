@@ -31,6 +31,8 @@
     
     TextToJSONObjectTransformerTask *task = [[TextToJSONObjectTransformerTask alloc]initWithText:self.textFieldMsg.text];
     
+    __weak typeof (self) weakSelf = self;
+    
     [[[task task] chain:^id(ChainableTask *task) {
         ChatMsgObject *result = task.result;
         if (task.error == nil) {
@@ -39,7 +41,7 @@
             return [task.error description];
         }
     }] chainInMainThread:^id(ChainableTask *task) {
-        self.textViewJSON.text = task.result;
+        weakSelf.textViewJSON.text = task.result;
         return nil;
     }];
     
