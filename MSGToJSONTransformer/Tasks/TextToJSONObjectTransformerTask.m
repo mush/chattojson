@@ -80,26 +80,6 @@ NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
 
 
 @implementation TextToJSONObjectTransformerTask (CompositeTask)
-+(ChainableTask*)taskForDetectingUniqueURLsInText:(NSString*)text{
-    
-    return [[ChainableTask taskWithResult:nil] chainForSuccess:^id(ChainableTask *task) {
-        NSError *error = nil;
-        NSDataDetector *linkDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:&error];
-        
-        NSMutableSet *urls = [NSMutableSet set];
-        
-        [linkDetector enumerateMatchesInString:text options:NSMatchingReportProgress range:NSMakeRange(0, text.length) usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
-            
-            if([result URL]){
-                [urls addObject:[result URL]];
-            }
-            
-        }];
-        
-        return urls;
-    }];
-    
-}
 
 +(ChainableTask*)taskForMentionsForText:(NSString*)text{
     

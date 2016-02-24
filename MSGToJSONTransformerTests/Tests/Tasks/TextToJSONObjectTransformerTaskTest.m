@@ -54,51 +54,51 @@
     EXP_END();
 }
 
--(void)testTaskForDetectingUniqueURLsInText{
-    EXP_START(@"testTaskForDetectingUniqueURLsInText");
-    ChainableTask *taskPlainURL = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"plain url http://www.google.com.au"];
-    ChainableTask *taskMulipleURLs = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"muliple urls http://www.google.com.au and http://www.twitter.com"];
-    ChainableTask *taskMultipleSameURLs = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"same urls http://www.google.com.au and http://www.google.com.au"];
-    ChainableTask *taskNoUrl = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"no url"];
-    ChainableTask *taskUrlWithQueryParams = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"url with query params https://www.google.com.au/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=query+parameters"];
-    
-    [[ParallelTask runAllTasks:@[taskPlainURL, taskMulipleURLs, taskMultipleSameURLs, taskNoUrl, taskUrlWithQueryParams]] chainForSuccess:^id(ChainableTask *task) {
-        
-        //0
-        NSSet *expected = [HelperUnitTest urlSetFromStringUrl:@"http://www.google.com.au", nil];
-        NSSet *result = task.result[0];
-        XCTAssertTrue([expected isEqualToSet:result], @"failed for plain url type");
-        
-        //1
-        expected = [HelperUnitTest urlSetFromStringUrl:@"http://www.google.com.au", @"http://www.twitter.com", nil];
-        result = task.result[1];
-        XCTAssertTrue([expected isEqualToSet:result], @"multiple urls detection failed");
-        
-        //2
-        result = task.result[2];
-        XCTAssertTrue(result.count == 1, @"multiple same url detection failed. count didnt match");
-        expected = [HelperUnitTest urlSetFromStringUrl:@"http://www.google.com.au", nil];
-        XCTAssertTrue([expected isEqualToSet:result], @"multiple same url detection failed");
-        
-        //3
-        result = task.result[3];
-        XCTAssertTrue(result.count == 0, @"count should be 0");
-        expected = [HelperUnitTest urlSetFromStringUrl:nil];
-        XCTAssertTrue([expected isEqualToSet:result], @"no url case failed");
-        
-        //4
-        result = task.result[4];
-        expected = [HelperUnitTest urlSetFromStringUrl:@"https://www.google.com.au/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=query+parameters", nil];
-        XCTAssertTrue([expected isEqualToSet:result], @"failed for url with query params");
-
-        EXP_FULFILL();
-        return nil;
-    }];
-    
-    
-    EXP_END();
-    
-}
+//-(void)testTaskForDetectingUniqueURLsInText{
+//    EXP_START(@"testTaskForDetectingUniqueURLsInText");
+//    ChainableTask *taskPlainURL = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"plain url http://www.google.com.au"];
+//    ChainableTask *taskMulipleURLs = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"muliple urls http://www.google.com.au and http://www.twitter.com"];
+//    ChainableTask *taskMultipleSameURLs = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"same urls http://www.google.com.au and http://www.google.com.au"];
+//    ChainableTask *taskNoUrl = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"no url"];
+//    ChainableTask *taskUrlWithQueryParams = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"url with query params https://www.google.com.au/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=query+parameters"];
+//    
+//    [[ParallelTask runAllTasks:@[taskPlainURL, taskMulipleURLs, taskMultipleSameURLs, taskNoUrl, taskUrlWithQueryParams]] chainForSuccess:^id(ChainableTask *task) {
+//        
+//        //0
+//        NSSet *expected = [HelperUnitTest urlSetFromStringUrl:@"http://www.google.com.au", nil];
+//        NSSet *result = task.result[0];
+//        XCTAssertTrue([expected isEqualToSet:result], @"failed for plain url type");
+//        
+//        //1
+//        expected = [HelperUnitTest urlSetFromStringUrl:@"http://www.google.com.au", @"http://www.twitter.com", nil];
+//        result = task.result[1];
+//        XCTAssertTrue([expected isEqualToSet:result], @"multiple urls detection failed");
+//        
+//        //2
+//        result = task.result[2];
+//        XCTAssertTrue(result.count == 1, @"multiple same url detection failed. count didnt match");
+//        expected = [HelperUnitTest urlSetFromStringUrl:@"http://www.google.com.au", nil];
+//        XCTAssertTrue([expected isEqualToSet:result], @"multiple same url detection failed");
+//        
+//        //3
+//        result = task.result[3];
+//        XCTAssertTrue(result.count == 0, @"count should be 0");
+//        expected = [HelperUnitTest urlSetFromStringUrl:nil];
+//        XCTAssertTrue([expected isEqualToSet:result], @"no url case failed");
+//        
+//        //4
+//        result = task.result[4];
+//        expected = [HelperUnitTest urlSetFromStringUrl:@"https://www.google.com.au/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=query+parameters", nil];
+//        XCTAssertTrue([expected isEqualToSet:result], @"failed for url with query params");
+//
+//        EXP_FULFILL();
+//        return nil;
+//    }];
+//    
+//    
+//    EXP_END();
+//    
+//}
 
 - (void)testTaskForMentionsAndEmoticonsForText {
     EXP_START(@"testTaskForMentionsAndEmoticonsForText");

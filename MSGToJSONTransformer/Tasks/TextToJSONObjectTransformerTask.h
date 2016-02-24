@@ -28,15 +28,6 @@ If any error occurrs the consumer of this class should handle that which can be 
 
 @interface TextToJSONObjectTransformerTask (CompositeTask)
 /**
- *  Task for detecting urls/links in a given text. Internally it uses NSDataDetector with type NSTextCheckingTypeLink.
- *
- *  @param text Text from which the urls needs to be detected.
- *
- *  @return A task contains the result having an array of unique urls(NSURL) found in text.
- */
-+(ChainableTask*)taskForDetectingUniqueURLsInText:(NSString*)text;
-
-/**
  *  Given a URL the task provides the title of the url. Internally it uses FetchHTMLPageContentTask and ParseHTMLPageTask
  *  in order to perform the task. If any error occurs (i.e. network issue) the title for that url is given as an empty string.
  *
