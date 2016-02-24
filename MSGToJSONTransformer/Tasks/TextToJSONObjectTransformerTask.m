@@ -13,6 +13,9 @@
 #import "ParallelTask.h"
 #import "LinkObject.h"
 
+#import "URLDetectionTask.h"
+
+
 NSString *const KEY_MENTIONS = @"KEY_MENTIONS";
 NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
 
@@ -35,6 +38,7 @@ NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
     __block NSArray<LinkObject*> *links;
     __block NSArray *mentions;
     __block NSArray *emoticons;
+    __block NSString *trimmedText;
     
     if(!self.text || self.text.length == 0){
         return [ChainableTask taskWithResult:[[ChatMsgObject alloc]initWithMentions:@[] emoticons:@[] links:@[]]];
@@ -43,12 +47,15 @@ NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
     //detect urls.
     return [[[[[[ChainableTask taskWithResult:nil] chainForSuccess:^id(ChainableTask *task) {
 
-        return [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:self.text];
+        return [[[URLDetectionTask alloc]initWithText:self.text] task];
     }]  //then fetch title for all urls
         chainForSuccess:^id(ChainableTask *task) {
 
+            DetectedUrlObject *result = task.result;
+            trimmedText = result.trimmedText;
+            
             NSMutableArray *tasks = [NSMutableArray array];
-            for(NSURL *url in task.result){
+            for(NSURL *url in result.urls){
                 [tasks addObject:[TextToJSONObjectTransformerTask taskForPageTitleForURL:url]];
             }
             
@@ -58,10 +65,10 @@ NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
             
             links = task.result;
             
-            return [TextToJSONObjectTransformerTask taskForMentionsForText:self.text];
+            return [TextToJSONObjectTransformerTask taskForMentionsForText:trimmedText];
     }]  chain:^id(ChainableTask *task) {
             mentions = task.result;
-            return [TextToJSONObjectTransformerTask taskForEmoticonsForText:self.text];
+            return [TextToJSONObjectTransformerTask taskForEmoticonsForText:trimmedText];
     }]  //finally perform json serialization
         chain:^id(ChainableTask *task) {
             emoticons = task.result;

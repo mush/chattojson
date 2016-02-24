@@ -24,7 +24,7 @@ typedef id(^ChainableBlock)(ChainableTask *task);
 /**
  *  Convenient method for getting a completed task with result.
  *
- *  @param result any type of object.
+ *  @param result any type of object. This object must implement NSCopying protocol.
  *
  *  @return returns a completed task with result.
  */

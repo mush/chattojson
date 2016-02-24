@@ -45,6 +45,9 @@
 		227E7F7F1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F6B1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m */; };
 		227E7F811C7B35B400ABAF6C /* TaskProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 227E7F3E1C7B30A500ABAF6C /* TaskProvider.h */; };
 		227E7F821C7B360400ABAF6C /* Chain.h in Headers */ = {isa = PBXBuildFile; fileRef = 227E7F251C7B30A500ABAF6C /* Chain.h */; };
+		227E7F8A1C7B388B00ABAF6C /* JSONObject+HipChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F891C7B388B00ABAF6C /* JSONObject+HipChat.m */; };
+		227E7F8D1C7D9CE400ABAF6C /* URLDetectionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F8C1C7D9CE400ABAF6C /* URLDetectionTask.m */; };
+		227E7F961C7DA33100ABAF6C /* URLDetectionTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F951C7DA33100ABAF6C /* URLDetectionTaskTest.m */; };
 		BAD636A5D0D724DFE60F65B4 /* libPods-MSGToJSONTransformerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +120,11 @@
 		227E7F691C7B332900ABAF6C /* ParseHTMLPageTaskTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseHTMLPageTaskTests.m; sourceTree = "<group>"; };
 		227E7F6A1C7B332900ABAF6C /* RegExMatcherTaskTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegExMatcherTaskTest.m; sourceTree = "<group>"; };
 		227E7F6B1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextToJSONObjectTransformerTaskTest.m; sourceTree = "<group>"; };
+		227E7F881C7B388B00ABAF6C /* JSONObject+HipChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONObject+HipChat.h"; sourceTree = "<group>"; };
+		227E7F891C7B388B00ABAF6C /* JSONObject+HipChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONObject+HipChat.m"; sourceTree = "<group>"; };
+		227E7F8B1C7D9CE400ABAF6C /* URLDetectionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLDetectionTask.h; sourceTree = "<group>"; };
+		227E7F8C1C7D9CE400ABAF6C /* URLDetectionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLDetectionTask.m; sourceTree = "<group>"; };
+		227E7F951C7DA33100ABAF6C /* URLDetectionTaskTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLDetectionTaskTest.m; sourceTree = "<group>"; };
 		36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSGToJSONTransformerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFC62AA9EA8EC1D84EA48F1 /* Pods-MSGToJSONTransformerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGToJSONTransformerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3BD090F9944FFE5B2CEBAAA /* Pods-MSGToJSONTransformerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGToJSONTransformerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +174,7 @@
 			children = (
 				227E7F231C7B30A500ABAF6C /* libs */,
 				227E7F301C7B30A500ABAF6C /* Tasks */,
+				227E7F841C7B381500ABAF6C /* Extensions */,
 				227E7F011C7B307E00ABAF6C /* AppDelegate.h */,
 				227E7F021C7B307E00ABAF6C /* AppDelegate.m */,
 				227E7F041C7B307E00ABAF6C /* ViewController.h */,
@@ -235,16 +244,18 @@
 		227E7F301C7B30A500ABAF6C /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				227E7F3E1C7B30A500ABAF6C /* TaskProvider.h */,
+				227E7F371C7B30A500ABAF6C /* TaskObjects */,
 				227E7F311C7B30A500ABAF6C /* FetchHTMLPageContentTask.h */,
 				227E7F321C7B30A500ABAF6C /* FetchHTMLPageContentTask.m */,
 				227E7F331C7B30A500ABAF6C /* ParseHTMLPageTask.h */,
 				227E7F341C7B30A500ABAF6C /* ParseHTMLPageTask.m */,
-				227E7F351C7B30A500ABAF6C /* RegExMatcherTask.h */,
-				227E7F361C7B30A500ABAF6C /* RegExMatcherTask.m */,
-				227E7F371C7B30A500ABAF6C /* TaskObjects */,
-				227E7F3E1C7B30A500ABAF6C /* TaskProvider.h */,
 				227E7F3F1C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.h */,
 				227E7F401C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.m */,
+				227E7F351C7B30A500ABAF6C /* RegExMatcherTask.h */,
+				227E7F361C7B30A500ABAF6C /* RegExMatcherTask.m */,
+				227E7F8B1C7D9CE400ABAF6C /* URLDetectionTask.h */,
+				227E7F8C1C7D9CE400ABAF6C /* URLDetectionTask.m */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -331,8 +342,18 @@
 				227E7F691C7B332900ABAF6C /* ParseHTMLPageTaskTests.m */,
 				227E7F6A1C7B332900ABAF6C /* RegExMatcherTaskTest.m */,
 				227E7F6B1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m */,
+				227E7F951C7DA33100ABAF6C /* URLDetectionTaskTest.m */,
 			);
 			path = Tasks;
+			sourceTree = "<group>";
+		};
+		227E7F841C7B381500ABAF6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				227E7F881C7B388B00ABAF6C /* JSONObject+HipChat.h */,
+				227E7F891C7B388B00ABAF6C /* JSONObject+HipChat.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3B48B5689312FAD3EA9B39E6 /* Frameworks */ = {
@@ -529,6 +550,7 @@
 			files = (
 				227E7F411C7B30A500ABAF6C /* ChainableTask.m in Sources */,
 				227E7F481C7B30A500ABAF6C /* ChatMsgObject.m in Sources */,
+				227E7F8A1C7B388B00ABAF6C /* JSONObject+HipChat.m in Sources */,
 				227E7F061C7B307E00ABAF6C /* ViewController.m in Sources */,
 				227E7F421C7B30A500ABAF6C /* ParallelTask.m in Sources */,
 				227E7F031C7B307E00ABAF6C /* AppDelegate.m in Sources */,
@@ -537,6 +559,7 @@
 				227E7F431C7B30A500ABAF6C /* JSONObject.m in Sources */,
 				227E7F4A1C7B30A500ABAF6C /* ParsedHTMLObject.m in Sources */,
 				227E7F491C7B30A500ABAF6C /* LinkObject.m in Sources */,
+				227E7F8D1C7D9CE400ABAF6C /* URLDetectionTask.m in Sources */,
 				227E7F001C7B307E00ABAF6C /* main.m in Sources */,
 				227E7F451C7B30A500ABAF6C /* FetchHTMLPageContentTask.m in Sources */,
 				227E7F461C7B30A500ABAF6C /* ParseHTMLPageTask.m in Sources */,
@@ -557,6 +580,7 @@
 				227E7F791C7B332900ABAF6C /* ParallelTaskTests.m in Sources */,
 				227E7F7E1C7B332900ABAF6C /* RegExMatcherTaskTest.m in Sources */,
 				227E7F6D1C7B332900ABAF6C /* HelperUnitTest.m in Sources */,
+				227E7F961C7DA33100ABAF6C /* URLDetectionTaskTest.m in Sources */,
 				227E7F7C1C7B332900ABAF6C /* FetchHTMLPageContentTaskTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

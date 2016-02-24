@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "TextToJSONObjectTransformerTask.h"
+#import "JSONObject+HipChat.h"
+
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textViewJSON;
@@ -36,7 +38,7 @@
     [[[task task] chain:^id(ChainableTask *task) {
         ChatMsgObject *result = task.result;
         if (task.error == nil) {
-            return [result toJSONString];
+            return [result toJSONString2];
         }else{
             return [task.error description];
         }
