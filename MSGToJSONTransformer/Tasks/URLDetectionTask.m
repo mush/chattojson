@@ -39,27 +39,45 @@
 
 -(ChainableTask *)task{
     
-    NSError *error = nil;
-    NSDataDetector *linkDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:&error];
+    if(_text == nil || _text.length == 0){
+        return [ChainableTask taskWithResult:[[DetectedUrlObject alloc]initWithUrls:@[] trimmedText:@""]];
+    }
     
-    NSMutableSet *urls = [NSMutableSet set];
-    
-    [linkDetector enumerateMatchesInString:_text options:NSMatchingReportProgress range:NSMakeRange(0, _text.length) usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
+    return [[ChainableTask taskWithResult:nil] chainForSuccess:^id(ChainableTask *task) {
+        NSError *error = nil;
+        NSDataDetector *linkDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:&error];
         
-        if([result URL]){
-            [urls addObject:[result URL]];
-        }
+        NSMutableSet *urls = [NSMutableSet set];
         
+
+        NSMutableString *trimmedString = [NSMutableString string];
+        __block NSInteger startIndex = 0, lastIndex;
+
+        [linkDetector enumerateMatchesInString:_text options:NSMatchingReportProgress range:NSMakeRange(0, _text.length) usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
+            
+            if([result URL]){
+                
+                [urls addObject:[result URL]];
+                
+                lastIndex = result.range.location - 1;
+                [trimmedString appendString:[_text substringWithRange:NSMakeRange(startIndex, lastIndex - startIndex + 1)]];
+                startIndex = lastIndex + result.range.length + 1;
+            }
+            
+        }];
+        
+        [trimmedString appendString:[_text substringWithRange:NSMakeRange(startIndex, _text.length - startIndex)]];
+        
+        return [[DetectedUrlObject alloc]initWithUrls:[urls allObjects] trimmedText:trimmedString];
     }];
     
-    __block NSString *trimmedString = _text;
+//    
+//    
+//    [urls enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
+//        NSString *urlStr = [obj absoluteString];
+//        trimmedString = [trimmedString stringByReplacingOccurrencesOfString:urlStr withString:@""];
+//    }];
     
-    [urls enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
-        NSString *urlStr = [obj absoluteString];
-        trimmedString = [trimmedString stringByReplacingOccurrencesOfString:urlStr withString:@""];
-    }];
-    
-    return [ChainableTask taskWithResult:[[DetectedUrlObject alloc]initWithUrls:[urls allObjects] trimmedText:trimmedString]];
 }
 
 @end

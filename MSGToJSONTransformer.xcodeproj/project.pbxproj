@@ -47,7 +47,7 @@
 		227E7F821C7B360400ABAF6C /* Chain.h in Headers */ = {isa = PBXBuildFile; fileRef = 227E7F251C7B30A500ABAF6C /* Chain.h */; };
 		227E7F8A1C7B388B00ABAF6C /* JSONObject+HipChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F891C7B388B00ABAF6C /* JSONObject+HipChat.m */; };
 		227E7F8D1C7D9CE400ABAF6C /* URLDetectionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F8C1C7D9CE400ABAF6C /* URLDetectionTask.m */; };
-		227E7F961C7DA33100ABAF6C /* URLDetectionTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F951C7DA33100ABAF6C /* URLDetectionTaskTest.m */; };
+		227E7F981C7DBD1900ABAF6C /* URLDetectionTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F971C7DBD1900ABAF6C /* URLDetectionTaskTest.m */; };
 		BAD636A5D0D724DFE60F65B4 /* libPods-MSGToJSONTransformerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -124,7 +124,7 @@
 		227E7F891C7B388B00ABAF6C /* JSONObject+HipChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONObject+HipChat.m"; sourceTree = "<group>"; };
 		227E7F8B1C7D9CE400ABAF6C /* URLDetectionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLDetectionTask.h; sourceTree = "<group>"; };
 		227E7F8C1C7D9CE400ABAF6C /* URLDetectionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLDetectionTask.m; sourceTree = "<group>"; };
-		227E7F951C7DA33100ABAF6C /* URLDetectionTaskTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLDetectionTaskTest.m; sourceTree = "<group>"; };
+		227E7F971C7DBD1900ABAF6C /* URLDetectionTaskTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLDetectionTaskTest.m; sourceTree = "<group>"; };
 		36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSGToJSONTransformerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFC62AA9EA8EC1D84EA48F1 /* Pods-MSGToJSONTransformerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGToJSONTransformerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3BD090F9944FFE5B2CEBAAA /* Pods-MSGToJSONTransformerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGToJSONTransformerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -342,7 +342,7 @@
 				227E7F691C7B332900ABAF6C /* ParseHTMLPageTaskTests.m */,
 				227E7F6A1C7B332900ABAF6C /* RegExMatcherTaskTest.m */,
 				227E7F6B1C7B332900ABAF6C /* TextToJSONObjectTransformerTaskTest.m */,
-				227E7F951C7DA33100ABAF6C /* URLDetectionTaskTest.m */,
+				227E7F971C7DBD1900ABAF6C /* URLDetectionTaskTest.m */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -580,7 +580,7 @@
 				227E7F791C7B332900ABAF6C /* ParallelTaskTests.m in Sources */,
 				227E7F7E1C7B332900ABAF6C /* RegExMatcherTaskTest.m in Sources */,
 				227E7F6D1C7B332900ABAF6C /* HelperUnitTest.m in Sources */,
-				227E7F961C7DA33100ABAF6C /* URLDetectionTaskTest.m in Sources */,
+				227E7F981C7DBD1900ABAF6C /* URLDetectionTaskTest.m in Sources */,
 				227E7F7C1C7B332900ABAF6C /* FetchHTMLPageContentTaskTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

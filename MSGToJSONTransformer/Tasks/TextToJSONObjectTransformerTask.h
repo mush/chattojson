@@ -48,6 +48,7 @@ If any error occurrs the consumer of this class should handle that which can be 
 
 /**
  *  Given a text it performs regular expression matching for finding emoticons. Emoticons are defined here https://www.hipchat.com/emoticons.
+ *  They are alphanumeric and 1 to 15 char long.
  *
  *  @param text text
  *
