@@ -54,6 +54,28 @@
     EXP_END();
 }
 
+-(void)testTask{
+    EXP_START(@"testTask");
+    
+    ChainableTask *taskSimple = [[[TextToJSONObjectTransformerTask alloc]initWithText:@"hello @mush (smiley). check this out http://www.google.com"] task];
+    
+    [taskSimple chainForSuccess:^id(ChainableTask *task) {
+        XCTAssertTrue([task.result isKindOfClass:[ChatMsgObject class]], @"provided object is not ChatMsgObject");
+        
+        ChatMsgObject *expectObj = [[ChatMsgObject alloc]initWithMentions:@[@"mush"] emoticons:@[@"smiley"] links:@[[[LinkObject alloc]initWithUrl:@"http://www.google.com" title:@"Google"]]];
+        ChatMsgObject *found = task.result;
+        
+        XCTAssertTrue([found isEqualToJSONObject:expectObj]);
+        
+        EXP_FULFILL();
+        
+        return nil;
+    }];
+    
+    
+    EXP_END();
+}
+
 //-(void)testTaskForDetectingUniqueURLsInText{
 //    EXP_START(@"testTaskForDetectingUniqueURLsInText");
 //    ChainableTask *taskPlainURL = [TextToJSONObjectTransformerTask taskForDetectingUniqueURLsInText:@"plain url http://www.google.com.au"];
