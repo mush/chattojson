@@ -114,38 +114,38 @@
     
     ChainableTask *tasksForEmoticons = [[ParallelTask runAllTasks:testTasksEmoticon] chainForSuccess:^id(ChainableTask *task) {
         //0
-        NSArray *expected = @[@"0123456789abc"];
-        NSArray *result = task.result[0];
-        XCTAssertTrue([expected isEqualToArray:result], @"alphanumeric failed");
+        NSSet *expected = [NSSet setWithObject:@"0123456789abc"];
+        NSSet *result = task.result[0];
+        XCTAssertTrue([expected isEqualToSet:result], @"alphanumeric failed");
         
         //1
-        expected = @[];
+        expected = [NSSet set];
         result = task.result[1];
-        XCTAssertTrue([expected isEqualToArray:result], @"invalid char test failed");
+        XCTAssertTrue([expected isEqualToSet:result], @"invalid char test failed");
         
         //2
-        expected = @[@"smiley"];
+        expected = [NSSet setWithObject:@"smiley"];
         result = task.result[2];
-        XCTAssertTrue([expected isEqualToArray:result], @"nested test failed");
+        XCTAssertTrue([expected isEqualToSet:result], @"nested test failed");
         
         //3
-        expected = @[];
+        expected = [NSSet set];
         result = task.result[3];
-        XCTAssertTrue([expected isEqualToArray:result], @"long emoticon test failed");
+        XCTAssertTrue([expected isEqualToSet:result], @"long emoticon test failed");
         
         //4
-        expected = @[];
+        expected = [NSSet set];
         result = task.result[4];
-        XCTAssertTrue([expected isEqualToArray:result], @"empty emoticon test failed");
+        XCTAssertTrue([expected isEqualToSet:result], @"empty emoticon test failed");
         
         //5
-        expected = @[@"1"];
+        expected = [NSSet setWithObject:@"1"];
         result = task.result[5];
-        XCTAssertTrue([expected isEqualToArray:result], @"min length emoticon test failed");
+        XCTAssertTrue([expected isEqualToSet:result], @"min length emoticon test failed");
         
         //6
-        NSSet *expectedSet = [NSSet setWithArray:@[@"multiple", @"smiley"]];
-        NSSet *resultSet = [NSSet setWithArray:task.result[6]];
+        NSSet *expectedSet = [NSSet setWithObjects:@"multiple", @"smiley", nil];
+        NSSet *resultSet = task.result[6];
         XCTAssertTrue([expectedSet isEqualToSet:resultSet], @"mulitple emoticon test failed");
         
         return nil;
@@ -159,19 +159,19 @@
     ChainableTask *tasksForMentions = [[ParallelTask runAllTasks:testTasksMention] chainForSuccess:^id(ChainableTask *task) {
         
         //0
-        NSArray *expected = @[@"Abc_0123"];
-        NSArray *result = task.result[0];
-        XCTAssertTrue([expected isEqualToArray:result], @"wordchars failed");
+        NSSet *expected = [NSSet setWithObject:@"Abc_0123"];
+        NSSet *result = task.result[0];
+        XCTAssertTrue([expected isEqualToSet:result], @"wordchars failed");
         
         //1
-        expected = @[@"mu"];
+        expected = [NSSet setWithObject:@"mu"];
         result = task.result[1];
-        XCTAssertTrue([expected isEqualToArray:result], @"invalid char test failed");
+        XCTAssertTrue([expected isEqualToSet:result], @"invalid char test failed");
         
         //2
-        expected = @[];
+        expected = [NSSet set];
         result = task.result[2];
-        XCTAssertTrue([expected isEqualToArray:result], @"no mentions test failed");
+        XCTAssertTrue([expected isEqualToSet:result], @"no mentions test failed");
         
         return nil;
     }];

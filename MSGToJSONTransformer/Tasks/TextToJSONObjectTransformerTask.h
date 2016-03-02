@@ -42,7 +42,7 @@ If any error occurrs the consumer of this class should handle that which can be 
  *
  *  @param text text
  *
- *  @return returns a task having the result as an array containing unique mentions
+ *  @return returns a task having the result as an set containing unique mentions
  */
 +(ChainableTask*)taskForEmoticonsForText:(NSString*)text;
 
@@ -52,7 +52,7 @@ If any error occurrs the consumer of this class should handle that which can be 
  *
  *  @param text text
  *
- *  @return returns a task having the result as an array containing unique emoticons
+ *  @return returns a task having the result as an set containing unique emoticons
  */
 +(ChainableTask*)taskForMentionsForText:(NSString*)text;
 

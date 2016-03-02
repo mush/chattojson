@@ -93,8 +93,9 @@ NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
     [matcher addCapturingGroup:kRegExMentions forKey:keyMentions];
     
     return [[matcher task] chain:^id(ChainableTask *task) {
-        NSArray *mentions = [NSArray arrayWithArray:[[NSSet setWithArray:task.result[keyMentions]] allObjects]];
-        return [ChainableTask taskWithResult:mentions];
+        //NSArray *mentions = [NSArray arrayWithArray:[[NSSet setWithArray:task.result[keyMentions]] allObjects]];
+        
+        return [ChainableTask taskWithResult:[NSSet setWithArray:task.result[keyMentions]]];
     }];
 }
 
@@ -110,8 +111,9 @@ NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
     [matcher addCapturingGroup:kRegExEmoticons forKey:keyEmoticons];
     
     return [[matcher task] chain:^id(ChainableTask *task) {
-        NSArray *emoticons = [NSArray arrayWithArray:[[NSSet setWithArray:task.result[keyEmoticons]] allObjects]];
-        return [ChainableTask taskWithResult:emoticons];
+        //NSArray *emoticons = [NSArray arrayWithArray:[[NSSet setWithArray:task.result[keyEmoticons]] allObjects]];
+        
+        return [ChainableTask taskWithResult:[NSSet setWithArray:task.result[keyEmoticons]]];
     }];
 }
 
