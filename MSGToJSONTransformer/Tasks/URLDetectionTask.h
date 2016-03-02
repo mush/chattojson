@@ -10,13 +10,18 @@
 #import "TaskProvider.h"
 #import "JSONObject.h"
 
-@interface DetectedUrlObject : NSObject<NSCopying>
+@interface DetectedUrlObject : JSONObject
 @property(strong) NSArray *urls;
 @property(strong) NSString *trimmedText;
 
 -(instancetype)initWithUrls:(NSArray*)urls trimmedText:(NSString*)trimmedText;
 @end
 
+/**
+ *  Task that takes a text and provides an object of DetectedUrlObject. DetectedUrlObject contains detected urls in the given text
+ *  and a trimmed text without all the found urls.
+ *
+ */
 @interface URLDetectionTask : NSObject<TaskProvider>
 
 -(instancetype)initWithText:(NSString*)text;

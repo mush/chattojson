@@ -21,9 +21,9 @@
     return self;
 }
 
--(id)copyWithZone:(NSZone *)zone{
-    return [[DetectedUrlObject alloc]initWithUrls:self.urls trimmedText:self.trimmedText];
-}
+//-(id)copyWithZone:(NSZone *)zone{
+//    return [[DetectedUrlObject alloc]initWithUrls:self.urls trimmedText:self.trimmedText];
+//}
 
 @end
 
@@ -70,14 +70,7 @@
         
         return [[DetectedUrlObject alloc]initWithUrls:[urls allObjects] trimmedText:trimmedString];
     }];
-    
-//    
-//    
-//    [urls enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
-//        NSString *urlStr = [obj absoluteString];
-//        trimmedString = [trimmedString stringByReplacingOccurrencesOfString:urlStr withString:@""];
-//    }];
-    
+        
 }
 
 @end

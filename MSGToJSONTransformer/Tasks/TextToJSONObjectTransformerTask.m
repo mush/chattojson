@@ -48,7 +48,7 @@ NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
     return [[[[[[ChainableTask taskWithResult:nil] chainForSuccess:^id(ChainableTask *task) {
 
         return [[[URLDetectionTask alloc]initWithText:self.text] task];
-    }]  //then fetch title for all urls
+    }]  //then fetch titles for all urls
         chainForSuccess:^id(ChainableTask *task) {
 
             DetectedUrlObject *result = task.result;
@@ -69,7 +69,7 @@ NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
     }]  chain:^id(ChainableTask *task) {
             mentions = task.result;
             return [TextToJSONObjectTransformerTask taskForEmoticonsForText:trimmedText];
-    }]  //finally perform json serialization
+    }]  //finally create the model class
         chain:^id(ChainableTask *task) {
             emoticons = task.result;
             return [[ChatMsgObject alloc]initWithMentions:mentions emoticons:emoticons links:links];
