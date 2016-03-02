@@ -48,6 +48,7 @@
 		227E7F8A1C7B388B00ABAF6C /* JSONObject+HipChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F891C7B388B00ABAF6C /* JSONObject+HipChat.m */; };
 		227E7F8D1C7D9CE400ABAF6C /* URLDetectionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F8C1C7D9CE400ABAF6C /* URLDetectionTask.m */; };
 		227E7F981C7DBD1900ABAF6C /* URLDetectionTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E7F971C7DBD1900ABAF6C /* URLDetectionTaskTest.m */; };
+		22A122BA1C871A9E000BAA2D /* DetectedUrlObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A122B91C871A9E000BAA2D /* DetectedUrlObject.m */; };
 		BAD636A5D0D724DFE60F65B4 /* libPods-MSGToJSONTransformerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		227E7F8B1C7D9CE400ABAF6C /* URLDetectionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLDetectionTask.h; sourceTree = "<group>"; };
 		227E7F8C1C7D9CE400ABAF6C /* URLDetectionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLDetectionTask.m; sourceTree = "<group>"; };
 		227E7F971C7DBD1900ABAF6C /* URLDetectionTaskTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLDetectionTaskTest.m; sourceTree = "<group>"; };
+		22A122B81C871A9E000BAA2D /* DetectedUrlObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectedUrlObject.h; sourceTree = "<group>"; };
+		22A122B91C871A9E000BAA2D /* DetectedUrlObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectedUrlObject.m; sourceTree = "<group>"; };
 		36FA2FF4BFEB8E95FDAB1709 /* libPods-MSGToJSONTransformerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSGToJSONTransformerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFC62AA9EA8EC1D84EA48F1 /* Pods-MSGToJSONTransformerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGToJSONTransformerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3BD090F9944FFE5B2CEBAAA /* Pods-MSGToJSONTransformerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGToJSONTransformerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSGToJSONTransformerTests/Pods-MSGToJSONTransformerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 				227E7F3B1C7B30A500ABAF6C /* LinkObject.m */,
 				227E7F3C1C7B30A500ABAF6C /* ParsedHTMLObject.h */,
 				227E7F3D1C7B30A500ABAF6C /* ParsedHTMLObject.m */,
+				22A122B81C871A9E000BAA2D /* DetectedUrlObject.h */,
+				22A122B91C871A9E000BAA2D /* DetectedUrlObject.m */,
 			);
 			path = TaskObjects;
 			sourceTree = "<group>";
@@ -558,6 +563,7 @@
 				227E7F4B1C7B30A500ABAF6C /* TextToJSONObjectTransformerTask.m in Sources */,
 				227E7F431C7B30A500ABAF6C /* JSONObject.m in Sources */,
 				227E7F4A1C7B30A500ABAF6C /* ParsedHTMLObject.m in Sources */,
+				22A122BA1C871A9E000BAA2D /* DetectedUrlObject.m in Sources */,
 				227E7F491C7B30A500ABAF6C /* LinkObject.m in Sources */,
 				227E7F8D1C7D9CE400ABAF6C /* URLDetectionTask.m in Sources */,
 				227E7F001C7B307E00ABAF6C /* main.m in Sources */,

@@ -8,14 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TaskProvider.h"
-#import "JSONObject.h"
-
-@interface DetectedUrlObject : JSONObject
-@property(strong) NSArray *urls;
-@property(strong) NSString *trimmedText;
-
--(instancetype)initWithUrls:(NSArray*)urls trimmedText:(NSString*)trimmedText;
-@end
+#import "DetectedUrlObject.h"
 
 /**
  *  Task that takes a text and provides an object of DetectedUrlObject. DetectedUrlObject contains detected urls in the given text

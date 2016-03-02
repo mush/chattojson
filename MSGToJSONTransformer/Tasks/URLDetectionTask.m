@@ -9,24 +9,6 @@
 #import "URLDetectionTask.h"
 #import "RegExMatcherTask.h"
 
-@implementation DetectedUrlObject
-
--(instancetype)initWithUrls:(NSArray *)urls trimmedText:(NSString *)trimmedText{
-    
-    if (self = [super init]) {
-        self.urls = urls;
-        self.trimmedText = trimmedText;
-    }
-    
-    return self;
-}
-
-//-(id)copyWithZone:(NSZone *)zone{
-//    return [[DetectedUrlObject alloc]initWithUrls:self.urls trimmedText:self.trimmedText];
-//}
-
-@end
-
 @implementation URLDetectionTask{
     NSString *_text;
 }
