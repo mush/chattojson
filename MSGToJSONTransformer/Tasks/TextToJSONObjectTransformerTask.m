@@ -67,10 +67,12 @@ NSString *const KEY_EMOTICONs = @"KEY_EMOTICONs";
             
             return [TextToJSONObjectTransformerTask taskForMentionsForText:trimmedText];
     }]  chain:^id(ChainableTask *task) {
+            //result is a NSSet.
             mentions = [task.result allObjects];
             return [TextToJSONObjectTransformerTask taskForEmoticonsForText:trimmedText];
     }]  //finally create the model class
         chain:^id(ChainableTask *task) {
+            //result is a NSSet
             emoticons = [task.result allObjects];
             return [[ChatMsgObject alloc]initWithMentions:mentions emoticons:emoticons links:links];
     }];
