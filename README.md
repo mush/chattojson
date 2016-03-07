@@ -51,4 +51,5 @@ There are many greate benifits of doing things like this.
 *	Chain now exectutes all the tasks inside one concurrent queue. There should be an interface for providing user defined queue to run tasks.
 *	Currently one specific test case fails for a text having urls placed without spaces. In order to solve that we may have to use regex or NSScanner.
 *	To get the title of the URL the full content of the page is fetched. Since most of the time the title exists in the begining of the file we can fetch content in multipart mode and dynamically perform parsing in the content. HOwever, it may not worth as it adds complexity. Also we need to insvestigate whether it really improves the bandwidth use or not.
+*   THere are many test cases need to written especially for TextToJSONObjectTransformerTask.
 
