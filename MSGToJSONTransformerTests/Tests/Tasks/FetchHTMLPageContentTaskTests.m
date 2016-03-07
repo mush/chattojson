@@ -77,7 +77,7 @@
 -(void)testANonExistantURL{
     EXP_START(@"testANoExistantURL");
     
-    FetchHTMLPageContentTask *task = [[FetchHTMLPageContentTask alloc]initWithURL:[NSURL URLWithString:@"http://aleruaoiweflsfjasf.com"]];
+    FetchHTMLPageContentTask *task = [[FetchHTMLPageContentTask alloc]initWithURL:[NSURL URLWithString:@"http://anonexistanturl"]];
     
     [[task task] chain:^id(ChainableTask *task) {
         
